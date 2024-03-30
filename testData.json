@@ -1,0 +1,28 @@
+{
+    "login":{
+        "username": "Admin",
+        "password": "admin123",
+        "jobtitle": "QA Manager",
+        "jobdesc": "Manage QA team and handle release process",
+        "note": "This job has most importing"
+
+},
+
+    "addSkill":{
+        "name" : "QA Automation Engineer Sr.Manage8",
+        "description" : "Automation Engineer can make easire test"
+
+},
+    "education":{
+        "level" : "Masters of Arts1"
+},
+    "licenses":{
+        "licensesName": "Playwright certificate"
+},
+    "employeeInfo":{
+        "emplId": "12345",
+        "emplName": ""
+    }
+
+
+}
