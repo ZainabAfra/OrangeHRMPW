@@ -23,7 +23,12 @@ exports.PIMPage = class PIMPage{
         this.screen = "//form/div[1]/div/div[2]/div/div[2]/div/div"
         this.screenList = ".oxd-select-dropdown div"
         this.fieldName = '//*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[1]/div/div[2]/input'
+        this.type = "//*[@id='app']/div[1]/div[2]/div[2]/div/div/form/div[2]/div/div/div/div[2]/div/div"
+        this.typeList = ".oxd-select-dropdown div"
+        this.selectOption = '//*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[1]/div/div[2]/input'
+        this.save = "button[type='submit']"
     }
+    
 
     async gotoLoginPage()
     {
@@ -95,7 +100,18 @@ exports.PIMPage = class PIMPage{
             console.log(ScreenList)
         }
         await this.page.locator(this.screenList).nth(3).click()
-        await this.page.waitForTimeout(3000)
+        await this.page.locator(this.type).first().click()
+        await this.page.waitForSelector(this.typeList)
+        const typ = await this.page.$$(this.typeList)
+        for (let TYPE of typ)
+        {
+            const TypeList = await TYPE.textContent()
+            console.log(TypeList)
+        }
+        await this.page.locator(this.typeList).nth(1).click()
+        //await this.page.locator(this.selectOption).fill("Phone")
+        await this.page.locator(this.save).click()
+        await this.page.waitForTimeout(5000)
     }
     
 }

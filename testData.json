@@ -22,6 +22,9 @@
     "employeeInfo":{
         "emplId": "12345",
         "emplName": ""
+},
+    "configuration":{
+        "selectOptions" : "Phone"
     }
 
 
