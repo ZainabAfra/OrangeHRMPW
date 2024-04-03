@@ -16,7 +16,7 @@ test('PIM Page Employee List', async({page})=>{
   await page.waitForTimeout(3000)
 })
 
-test.only("PIM Custom Fields", async({page})=>{
+test("PIM Custom Fields", async({page})=>{
   const PIM =   new PIMPage(page)
   await PIM.CustomFieldsPage()
 })
